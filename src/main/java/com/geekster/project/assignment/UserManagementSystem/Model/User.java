@@ -32,9 +32,11 @@ public class User {
     private String dob;
 
 
+    @NotNull(message = "Date cannot be null")
+    @Past(message = "Date must be in the past")
     private LocalDate date = LocalDate.now();
 
-
+    @NotNull(message = "Time cannot be null")
     private LocalTime  time =  LocalTime.now();
 
 }
